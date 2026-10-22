@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F4F6FA;
+  --foreground: #0F172A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+}
+
+/* Original home screen heading typography from initial launch */
+.original-hero-heading {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* White Container with Rich Shade / Elevation */
+.white-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  color: #0F172A;
+}
+
+/* Card hover transitions with clean shadow shade */
+.feature-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 20px 35px -4px rgba(0, 0, 0, 0.12), 0 8px 16px -3px rgba(0, 0, 0, 0.06);
+}
+
+/* Split slider handle */
+.slider-handle {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Monospace stats badges */
+.mono-stat {
+  font-family: var(--font-mono, monospace);
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
